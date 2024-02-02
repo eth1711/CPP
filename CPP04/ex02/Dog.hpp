@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/02 19:43:54 by etlim             #+#    #+#             */
-/*   Updated: 2024/02/02 20:07:24 by etlim            ###   ########.fr       */
+/*   Created: 2024/02/02 19:43:58 by etlim             #+#    #+#             */
+/*   Updated: 2024/02/02 21:39:02 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
 # include <iostream>
 # include <string>
-# include "Animal.hpp"
+# include "AAnimal.hpp"
+# include "Brain.hpp"
 
-class Cat : public Animal
+class Dog : public AAnimal
 {
-    protected:
-        std::string type;
+    private:
+        Brain *_dogBrain;
 
     public:
-        Cat();
-        Cat(const Cat &copy);
-        Cat &operator=(const Cat &copy);
-        ~Cat();
+        Dog();
+        Dog(const Dog &copy);
+        Dog &operator=(const Dog &copy);
+        ~Dog();
 
-        std::string getType() const;
+        const Brain &getBrain() const;
         void makeSound() const;
 };
 

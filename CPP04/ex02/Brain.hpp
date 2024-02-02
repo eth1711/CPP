@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/02 19:43:54 by etlim             #+#    #+#             */
-/*   Updated: 2024/02/02 20:07:24 by etlim            ###   ########.fr       */
+/*   Created: 2024/02/02 19:54:24 by etlim             #+#    #+#             */
+/*   Updated: 2024/02/02 20:40:05 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 # include <iostream>
 # include <string>
-# include "Animal.hpp"
 
-class Cat : public Animal
+class Brain 
 {
-    protected:
-        std::string type;
+    private:
+        std::string _ideas[100];
+        
+    public: 
+        Brain();
+        Brain(const Brain &copy);
+        Brain &operator=(const Brain &copy);
+        ~Brain();
 
-    public:
-        Cat();
-        Cat(const Cat &copy);
-        Cat &operator=(const Cat &copy);
-        ~Cat();
-
-        std::string getType() const;
-        void makeSound() const;
+        const std::string *getIdeas(void) const;
+        void setIdeas()const;
 };
 
 #endif

@@ -8,7 +8,8 @@ RM = rm -rf
 
 ${NAME} : 
 	@echo Compiling...
-	@${CC} ${FLAGS} phonebook.cpp -o ${NAME}
+	@${CC} ${FLAGS} main.cpp -o ${NAME}
+	@echo Compiling Done!
 
 all : ${NAME}
 

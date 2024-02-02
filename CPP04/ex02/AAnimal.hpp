@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/02 19:43:54 by etlim             #+#    #+#             */
-/*   Updated: 2024/02/02 20:07:24 by etlim            ###   ########.fr       */
+/*   Created: 2024/02/02 19:43:46 by etlim             #+#    #+#             */
+/*   Updated: 2024/02/02 22:07:46 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef AANIMAL_HPP
+# define AANIMAL_HPP
 
 # include <iostream>
 # include <string>
-# include "Animal.hpp"
 
-class Cat : public Animal
+class AAnimal
 {
     protected:
         std::string type;
 
     public:
-        Cat();
-        Cat(const Cat &copy);
-        Cat &operator=(const Cat &copy);
-        ~Cat();
+        AAnimal();
+        AAnimal(const AAnimal &copy);
+        AAnimal &operator=(const AAnimal &copy);
+        virtual ~AAnimal();
 
-        std::string getType() const;
-        void makeSound() const;
+        virtual std::string getType() const;
+        virtual void makeSound() const = 0; //pure virtual function to complete ex02
+
 };
 
 #endif

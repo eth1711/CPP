@@ -9,6 +9,7 @@ RM = rm -rf
 ${NAME} : 
 	@echo Compiling...
 	@${CC} ${FLAGS} megaphone.cpp -o ${NAME}
+	@echo Compiling Done!
 
 all : ${NAME}
 
