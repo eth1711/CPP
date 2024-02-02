@@ -10,31 +10,5 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-using std::cout;
-using std::endl;
+#include "PhoneBook.hpp"
 
-class PhoneBook
-{
-private:
-    /* data */
-public:
-    
-PhoneBook(
-/* args */);
-    
-~PhoneBook(
-
-);
-};
-
-PhoneBook::PhoneBook(
-/* args */)
-{
-}
-
-PhoneBook::~PhoneBook(
-
-)
-{
-}
