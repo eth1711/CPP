@@ -1,6 +1,9 @@
 #include <iostream> 
-using namespace std; 
-  
+using std::cout;
+using std::cin;
+using std::endl; 
+using std::string;
+
 // driver code 
 int main() 
 { 
@@ -8,7 +11,9 @@ int main()
 
     cout << "Type in your firstname: ";
     cin >> firstName;
-    cout << "Your name is: " << firstName << endl;
+    if (firstName[0] == 'E')
+        cout << "Your name is: " << firstName << endl;
+    cout << "YOUR NAME DOES NOT START WITH E" << endl;
 
     return 0; 
 }
