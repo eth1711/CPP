@@ -4,7 +4,7 @@ using std::string;
 class Contact
 {
     private:
-        string firstName();
+        string firstName;
         string lastName;
         string nickName;
         string phoneNumber;
