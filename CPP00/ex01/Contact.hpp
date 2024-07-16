@@ -1,6 +1,7 @@
 #include <iostream>
 using std::string;
-
+using std::cout;
+using std::cin;
 class Contact
 {
     private:
@@ -16,7 +17,6 @@ class Contact
         string getNickName();
         string getPhoneNumber();
         string getDarkestSecret();
-
         void set_firstName();
         void set_lastName();
         void set_nickName();
