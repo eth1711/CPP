@@ -1,14 +1,18 @@
 #include <iostream>
+#include <iomanip>
+#include "Contact.hpp"
 using std::string;
+using std::setw;
 
 class PhoneBook
 {
     private:
-        string  Contact[8];
+        Contact _contact[8];
 
     public:
         PhoneBook();//Constructor
         ~PhoneBook();//Destructor
+        void    welcome();
         void    addContact();
-        void    searchContact();
+        string  searchContact();
 };
