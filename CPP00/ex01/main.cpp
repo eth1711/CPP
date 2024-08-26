@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 19:07:49 by etlim             #+#    #+#             */
-/*   Updated: 2024/07/19 17:02:44 by etlim            ###   ########.fr       */
+/*   Updated: 2024/08/26 13:52:09 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,23 @@ using std::string;
 //1. why im using \n instead of endl
 //2. why im using "using std::" instead of
 //putting it in my code
-int main()
+int main(void)
 {
-    PhoneBook phonebook;
+    PhoneBook   phonebook;
+    string      input;
     
     phonebook.welcome();
-    
+    getline(cin, input);
+    while (input != "EXIT")
+    {
+        if (input == "ADD")
+            phonebook.addContact();
+        else if (input == "SEARCH")
+            phonebook.searchContact();
+        else
+            cout << "NO SUCH THING!" << "\n";
+        cout << ">";
+        getline(cin, input);
+    }
+    return (0);
 }

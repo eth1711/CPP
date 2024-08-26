@@ -1,5 +1,8 @@
 NAME = phonebook
 
+SRC = $(wildcard *.cpp)
+
+OBJ = $(SRC:.cpp=.o)
 CC = c++
 
 FLAGS = -Wall -Werror -Wextra -std=c++98
@@ -8,7 +11,7 @@ RM = rm -rf
 
 ${NAME} : 
 	@echo Compiling...
-	@${CC} ${FLAGS} main.cpp phonebook.cpp -o ${NAME}
+	@${CC} ${FLAGS} ${SRC} -o ${NAME}
 	@echo Compiling Done!
 
 all : ${NAME}
