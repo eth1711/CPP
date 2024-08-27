@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 19:07:49 by etlim             #+#    #+#             */
-/*   Updated: 2024/08/26 13:52:09 by etlim            ###   ########.fr       */
+/*   Updated: 2024/08/27 18:59:48 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ int main(void)
         else if (input == "SEARCH")
             phonebook.searchContact();
         else
-            cout << "NO SUCH THING!" << "\n";
-        cout << ">";
+            cout << "NO SUCH OPTION!" << "\n";
+        cout << "->";
         getline(cin, input);
     }
     return (0);

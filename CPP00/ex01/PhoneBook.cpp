@@ -6,13 +6,14 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 18:25:45 by etlim             #+#    #+#             */
-/*   Updated: 2024/08/26 14:16:07 by etlim            ###   ########.fr       */
+/*   Updated: 2024/08/27 19:00:41 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook(){
+    this->_index = 0;
 }
 
 PhoneBook::~PhoneBook(){      
@@ -30,12 +31,11 @@ void PhoneBook::welcome(){
 }
 
 void PhoneBook::addContact(){
-    static int i;
-    this->_contact[i % 8]
+    this->_contact[_index].init();
+    cout << this->_index << "\n";
+    this->_index = (_index + 1) % 8;
 }
-
 
 string PhoneBook::searchContact(){
-    
+    return ("hello\n");
 }
-
