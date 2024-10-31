@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 18:25:45 by etlim             #+#    #+#             */
-/*   Updated: 2024/07/19 17:13:26 by etlim            ###   ########.fr       */
+/*   Updated: 2024/10/31 13:13:52 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ void PhoneBook::welcome(){
 // }
 
 void PhoneBook::addContact(){
-    
+    cout << "HI\n";
 }
+
+void input_check()
