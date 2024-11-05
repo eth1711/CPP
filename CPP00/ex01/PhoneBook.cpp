@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 18:25:45 by etlim             #+#    #+#             */
-/*   Updated: 2024/10/31 14:39:45 by etlim            ###   ########.fr       */
+/*   Updated: 2024/11/05 13:51:19 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,25 +19,32 @@ PhoneBook::PhoneBook(){
 PhoneBook::~PhoneBook(){      
 }
 
-void PhoneBook::welcome(){
-    cout << "\nWelcome to this Awesome Phonebook!\n\n"
-    << "Type in your option of choice\n\n"
-    << "------------SELECT OPTION------------\n\n"
-    << "ADD : Create a contact\n"
-    << "SEARCH : Search for a contact\n"
-    << "EXIT : Throws phonebook away\n\n";
-    // << "-------------------------------------\n";
-    cout << ">";
+string  input_check(string input)
+{
+	string str;
+	
+	cout << "Enter your" << input << ": ";
+	getline(cin, str);
+	if (str.empty())
+	{
+		cout << "Nothing inputed!" << "\n";
+		cout << ">>";
+		getline(cin, str);
+	}
+	return (str);
 }
 
 void PhoneBook::addContact(){
-    this->_contact[_index].init();
-    cout << this->_index << "\n";
+    Contact *contact = &this->_contact[this->_index];
+    contact->set_firstName(input_check("first name"));
+    contact->set_lastName(input_check("last name"));
+    contact->set_nickName(input_check("nickname"));
+    contact->set_darkestSecret(input_check("darkest secret"));
+    contact->set_phoneNumber(input_check("phone number"));
+	cout << "Contact has been added" << "\n";
     this->_index = (_index + 1) % 8;
 }
 
 string PhoneBook::searchContact(){
     return ("hello\n");
 }
-
-void input_check()

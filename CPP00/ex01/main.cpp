@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 19:07:49 by etlim             #+#    #+#             */
-/*   Updated: 2024/10/31 14:38:37 by etlim            ###   ########.fr       */
+/*   Updated: 2024/11/05 12:07:09 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,18 @@ using std::string;
 //2. why im using "using std::" instead of
 //putting it in my code
 int main(void)
-int main(void)
 {
     PhoneBook	phonebook;
 	string		input;
     
-	phonebook.welcome();
+	cout << "\nWelcome to this Awesome Phonebook!\n\n"
+    << "Type in your option of choice\n\n"
+    << "------------SELECT OPTION------------\n\n"
+    << "ADD : Create a contact\n"
+    << "SEARCH : Search for a contact\n"
+    << "EXIT : Throws phonebook away\n\n";
+    // << "-------------------------------------\n";
+    cout << ">";
 	while (1)
 	{
 		cout << ">>";
