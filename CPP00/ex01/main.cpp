@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 19:07:49 by etlim             #+#    #+#             */
-/*   Updated: 2024/11/05 12:07:09 by etlim            ###   ########.fr       */
+/*   Updated: 2024/11/07 22:12:55 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,17 @@ int main(void)
     PhoneBook	phonebook;
 	string		input;
     
+	system("clear");
 	cout << "\nWelcome to this Awesome Phonebook!\n\n"
-    << "Type in your option of choice\n\n"
-    << "------------SELECT OPTION------------\n\n"
-    << "ADD : Create a contact\n"
-    << "SEARCH : Search for a contact\n"
-    << "EXIT : Throws phonebook away\n\n";
-    // << "-------------------------------------\n";
-    cout << ">";
+    << "Type in your option of choice\n";
+	
 	while (1)
 	{
-		cout << ">>";
+		cout << "\n------------SELECT OPTION------------\n\n"
+		<< "ADD : Create a contact\n"
+		<< "SEARCH : Search for a contact\n"
+		<< "EXIT : Throws phonebook away\n\n";
+   		cout << ">";
 		getline(cin, input);
 		if (!input.compare("ADD") )
 			phonebook.addContact();
@@ -46,7 +46,7 @@ int main(void)
 			break ;
 		}
 		else
-			cout << "Invalid Command" << "\n";
+			cout << "!!Invalid Command!!" << "\n\n";
 	}
 	return(0);
 }

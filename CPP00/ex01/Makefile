@@ -3,7 +3,7 @@ NAME = phonebook
 SRC = $(wildcard *.cpp)
 
 OBJ = $(SRC:.cpp=.o)
-CC = c++
+CC = g++
 
 FLAGS = -Wall -Werror -Wextra -std=c++98
 

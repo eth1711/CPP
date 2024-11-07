@@ -6,16 +6,19 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 15:02:30 by etlim             #+#    #+#             */
-/*   Updated: 2024/10/31 14:37:02 by etlim            ###   ########.fr       */
+/*   Updated: 2024/11/07 22:15:23 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <cstdlib>
+
 using std::string;
 using std::cout;
 using std::cin;
+using std::setw;
 class Contact
 {
     private:
