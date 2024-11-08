@@ -6,7 +6,7 @@
 /*   By: etlim <etlim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 19:07:49 by etlim             #+#    #+#             */
-/*   Updated: 2024/11/07 22:12:55 by etlim            ###   ########.fr       */
+/*   Updated: 2024/11/09 01:51:34 by etlim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ int main(void)
 		getline(cin, input);
 		if (!input.compare("ADD") )
 			phonebook.addContact();
-		// else if (!input.compare("SEARCH"))
-		// 	phonebook.searchContact();
+		else if (!input.compare("SEARCH"))
+			phonebook.searchContact();
 		else if (!input.compare("EXIT"))
 		{	
 			cout << "GOODBYE\n";
